@@ -1,9 +1,9 @@
 #Bad Permutations
 from itertools import permutations
-#n_testcases=int(input())
-l=[6,9]
-# for _ in range(n_testcases):
-#	l.append(int(input()))
+n_testcases=int(input())
+l=[]
+for _ in range(n_testcases):
+	l.append(int(input()))
 factors=[]
 for i in l:
 	factors.clear()
