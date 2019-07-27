@@ -5,20 +5,20 @@ def validity(s):
 	if slen>19 or slen<16 or s[0] not in valid_strt:
 		return 0
 	ls = list(s)
-	count=0
+	count = 0
 	item=ls[0]
 	for i in range(len(ls)) :
 		if ls[i] not in valid_char:
 			return 0
-		if ls[i]=='-':
+		if ls[i] == '-':
 			if i not in [9,4,14]:
 				return 0
 		else:
-			if count==4:
+			if count == 4:
 				return 0
 			else:
-				if ls[i]==item:
-					count+=1
+				if ls[i] == item:
+					count + = 1
 				else:
 					count=1
 					item=ls[i]
@@ -28,7 +28,7 @@ def validity(s):
 ##Driver code
 n=int(input())
 l=[]
-for _ in range(n):
+for _ in rang e(n):
 	l.append(input())
 for i in l:
 	out=validity(i)
